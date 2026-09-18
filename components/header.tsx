@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Phone } from "lucide-react"
+import Image from "next/image"
 
 export function Header() {
   return (
@@ -10,11 +11,15 @@ export function Header() {
 
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Logo placeholder */}
+          {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center">
-              <span className="text-xs text-muted-foreground">LOGO</span>
-            </div>
+            <Image
+              src="/logo.png"
+              alt="Red Fox Steam Clean logo"
+              width={48}
+              height={48}
+              className="rounded-lg"
+            />
             <div className="font-bold text-xl text-foreground">Red Fox Steam Clean</div>
           </div>
 

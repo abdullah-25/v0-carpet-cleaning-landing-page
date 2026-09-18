@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin } from "lucide-react"
+import Image from "next/image"
 
 export function Footer() {
   return (
@@ -8,9 +9,13 @@ export function Footer() {
           {/* Company info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-primary rounded flex items-center justify-center">
-                <span className="text-xs text-primary-foreground font-bold">RF</span>
-              </div>
+              <Image
+                src="/logo.png"
+                alt="Red Fox Steam Clean logo"
+                width={32}
+                height={32}
+                className="rounded"
+              />
               <span className="font-bold text-lg">Red Fox Steam Clean</span>
             </div>
             <p className="text-sm text-background/80">
