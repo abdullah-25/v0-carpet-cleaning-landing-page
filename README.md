@@ -16,6 +16,10 @@ Your project is live at:
 
 **[https://vercel.com/abdullahs-projects-cd5f596e/v0-carpet-cleaning-landing-page](https://vercel.com/abdullahs-projects-cd5f596e/v0-carpet-cleaning-landing-page)**
 
+### Render
+
+This project includes a `render.yaml` for deploying on [Render](https://render.com). Render uses npm build commands (`npm install --include=dev && npm run build`) rather than pnpm.
+
 ## Build your app
 
 Continue building your app on:
