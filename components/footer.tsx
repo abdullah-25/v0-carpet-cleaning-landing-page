@@ -8,16 +8,15 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
+            <a href="/" className="inline-block">
               <Image
                 src="/logo.png"
-                alt="Red Fox Steam Clean logo"
-                width={32}
-                height={32}
-                className="rounded"
+                alt="Red Fox Steam Clean"
+                width={113}
+                height={100}
+                className="h-[40px] w-auto"
               />
-              <span className="font-bold text-lg">Red Fox Steam Clean</span>
-            </div>
+            </a>
             <p className="text-sm text-background/80">
               Professional carpet and upholstery cleaning services for homes and businesses.
             </p>
