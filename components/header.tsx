@@ -12,16 +12,16 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <a href="/" className="flex items-center">
             <Image
               src="/logo.png"
-              alt="Red Fox Steam Clean logo"
-              width={48}
-              height={48}
-              className="rounded-lg"
+              alt="Red Fox Steam Clean"
+              width={113}
+              height={100}
+              className="h-[52px] w-auto"
+              priority
             />
-            <div className="font-bold text-xl text-foreground">Red Fox Steam Clean</div>
-          </div>
+          </a>
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
