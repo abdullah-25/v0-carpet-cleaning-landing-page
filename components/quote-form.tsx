@@ -19,27 +19,19 @@ export function QuoteForm() {
     const form = e.currentTarget
     const formData = new FormData(form)
 
-    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY
-
-    if (!accessKey) {
-      setStatus("error")
-      setErrorMessage("Form configuration error. Please call us directly.")
-      return
-    }
-
-    formData.append("access_key", accessKey)
-    formData.append("subject", "New Quote Request - Red Fox Steam Clean")
-    formData.append("from_name", "Red Fox Steam Clean Website")
-
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("https://formsubmit.co/ajax/info@redfoxsteamclean.com", {
         method: "POST",
-        body: formData,
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
+        body: JSON.stringify(Object.fromEntries(formData)),
       })
 
       const result = await response.json()
 
-      if (result.success) {
+      if (result.success === "true" || result.success === true) {
         setStatus("success")
         form.reset()
       } else {
@@ -124,8 +116,10 @@ export function QuoteForm() {
           {/* Right form */}
           <div className="bg-white rounded-lg p-6 lg:p-8">
             <form onSubmit={handleSubmit} className="space-y-4">
-              {/* Hidden field for email recipient */}
-              <input type="hidden" name="to" value="info@redfoxsteamclean.com" />
+              {/* FormSubmit.co configuration */}
+              <input type="hidden" name="_subject" value="New Red Fox Quote Request" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
 
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-2">

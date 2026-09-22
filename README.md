@@ -20,38 +20,21 @@ Professional steam cleaning services website for Red Fox Steam Clean, serving th
 
 ## Setup
 
-### Environment Variables
+### Quote Form
 
-The quote form uses [Web3Forms](https://web3forms.com/) (free tier) to send quote requests to email. To enable the form:
+The quote form uses [FormSubmit.co](https://formsubmit.co/) to send quote requests to email. **No API keys or environment variables are required** - it works out of the box.
 
-1. Go to [web3forms.com](https://web3forms.com/) and create a free account
-2. Get your Access Key from the dashboard
-3. Add the following environment variable to your Render service (or `.env.local` for local development):
-
-```
-NEXT_PUBLIC_WEB3FORMS_KEY=your_access_key_here
-```
-
-**Note:** Web3Forms will send quote submissions to `info@redfoxsteamclean.com` as configured in the form.
+Quote submissions are sent directly to `info@redfoxsteamclean.com`.
 
 ### Render Deployment
 
-This project includes a `render.yaml` for deploying on [Render](https://render.com).
-
-To add the environment variable on Render:
-1. Go to your service dashboard
-2. Navigate to **Environment** tab
-3. Add `NEXT_PUBLIC_WEB3FORMS_KEY` with your Web3Forms access key
-4. Save and redeploy
+This project includes a `render.yaml` for deploying on [Render](https://render.com). No additional configuration is needed for the contact form.
 
 ### Local Development
 
 ```bash
 # Install dependencies
 npm install
-
-# Create .env.local file with your Web3Forms key
-echo "NEXT_PUBLIC_WEB3FORMS_KEY=your_key_here" > .env.local
 
 # Run development server
 npm run dev
@@ -63,4 +46,4 @@ npm run dev
 - React 18
 - Tailwind CSS
 - Radix UI Components
-- Web3Forms (contact form)
+- FormSubmit.co (contact form - no API key needed)
