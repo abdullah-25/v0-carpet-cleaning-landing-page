@@ -1,34 +1,66 @@
-# Carpet cleaning landing page
+# Red Fox Steam Clean - Marketing Website
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+Professional steam cleaning services website for Red Fox Steam Clean, serving the Greater Toronto Area.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/abdullahs-projects-cd5f596e/v0-carpet-cleaning-landing-page)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/w4c272UR9pl)
+## Live Site
 
-## Overview
+**[https://redfoxsteamclean.com](https://redfoxsteamclean.com)**
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+## Services Offered
 
-## Deployment
+- Carpet Cleaning
+- Rug Cleaning
+- Upholstery Cleaning
+- Tile & Grout Cleaning
 
-Your project is live at:
+## Contact Information
 
-**[https://vercel.com/abdullahs-projects-cd5f596e/v0-carpet-cleaning-landing-page](https://vercel.com/abdullahs-projects-cd5f596e/v0-carpet-cleaning-landing-page)**
+- **Phone:** (416) 460-5911
+- **Email:** info@redfoxsteamclean.com
 
-### Render
+## Setup
 
-This project includes a `render.yaml` for deploying on [Render](https://render.com). Render uses npm build commands (`npm install --include=dev && npm run build`) rather than pnpm.
+### Environment Variables
 
-## Build your app
+The quote form uses [Web3Forms](https://web3forms.com/) (free tier) to send quote requests to email. To enable the form:
 
-Continue building your app on:
+1. Go to [web3forms.com](https://web3forms.com/) and create a free account
+2. Get your Access Key from the dashboard
+3. Add the following environment variable to your Render service (or `.env.local` for local development):
 
-**[https://v0.app/chat/projects/w4c272UR9pl](https://v0.app/chat/projects/w4c272UR9pl)**
+```
+NEXT_PUBLIC_WEB3FORMS_KEY=your_access_key_here
+```
 
-## How It Works
+**Note:** Web3Forms will send quote submissions to `info@redfoxsteamclean.com` as configured in the form.
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+### Render Deployment
+
+This project includes a `render.yaml` for deploying on [Render](https://render.com).
+
+To add the environment variable on Render:
+1. Go to your service dashboard
+2. Navigate to **Environment** tab
+3. Add `NEXT_PUBLIC_WEB3FORMS_KEY` with your Web3Forms access key
+4. Save and redeploy
+
+### Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Create .env.local file with your Web3Forms key
+echo "NEXT_PUBLIC_WEB3FORMS_KEY=your_key_here" > .env.local
+
+# Run development server
+npm run dev
+```
+
+## Tech Stack
+
+- Next.js 14
+- React 18
+- Tailwind CSS
+- Radix UI Components
+- Web3Forms (contact form)

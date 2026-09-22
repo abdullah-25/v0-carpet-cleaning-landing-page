@@ -4,14 +4,14 @@ import { Button } from "@/components/ui/button"
 export function ServicesSection() {
   const services = [
     {
-      title: "Carpet",
+      title: "Carpets",
       image: "/professional-carpet-cleaning-technician-with-equip.jpg",
       description: "Deep steam cleaning for all carpet types",
     },
     {
-      title: "Air Duct",
-      image: "/air-duct-cleaning-service-technician.jpg",
-      description: "Comprehensive air duct cleaning and maintenance",
+      title: "Rugs",
+      image: "/modern-living-room-with-clean-carpet-and-furniture.jpg",
+      description: "Professional cleaning for area rugs and specialty rugs",
     },
     {
       title: "Upholstery",
@@ -30,13 +30,12 @@ export function ServicesSection() {
       <div className="container mx-auto px-4">
         <div className="text-center space-y-4 mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground text-balance">
-            More Than Just Carpet Cleaning
+            Professional Steam Cleaning Services
           </h2>
           <div className="w-16 h-1 bg-primary mx-auto"></div>
           <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Red Fox Steam Clean gets carpets cleaner—AND everything else! From your floors to your furniture, air ducts,
-            and more, we provide whole-home and business cleaning. No matter where dirt, dust, and contaminants may
-            settle, we can clean it.
+            Red Fox Steam Clean specializes in professional steam cleaning for carpets, rugs, upholstery, and tile & grout.
+            From your floors to your furniture, we restore freshness and cleanliness to your home or business.
           </p>
         </div>
 
@@ -79,10 +78,12 @@ export function ServicesSection() {
         </div>
 
         <div className="text-center">
-          <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            Browse All Services
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Button>
+          <a href="#quote">
+            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
+              Get a Free Quote
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
+          </a>
         </div>
       </div>
     </section>

@@ -13,7 +13,7 @@ export function TestimonialsSection() {
       name: "Mike R.",
       platform: "Google",
       rating: 5,
-      text: "We had air ducts and carpet cleaned. The technicians were prompt, efficient and did a great job. We have hardwood floors and they took care in moving furniture so that there was no damage.",
+      text: "We had our carpets and area rugs cleaned. The technicians were prompt, efficient and did a great job. We have hardwood floors and they took care in moving furniture so that there was no damage.",
     },
     {
       name: "Jennifer L.",
@@ -79,10 +79,12 @@ export function TestimonialsSection() {
         </div>
 
         <div className="text-center">
-          <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            Read More Reviews
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Button>
+          <a href="#quote">
+            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
+              Get Your Free Quote
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
+          </a>
         </div>
       </div>
     </section>

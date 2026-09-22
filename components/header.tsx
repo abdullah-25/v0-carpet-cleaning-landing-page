@@ -6,7 +6,12 @@ export function Header() {
   return (
     <header className="bg-white border-b border-border">
       <div className="bg-primary text-primary-foreground py-2 text-center text-sm">
-        <span className="font-medium">Call Red Fox Steam Clean for a FREE QUOTE</span>
+        <span className="font-medium">
+          Call Red Fox Steam Clean for a FREE QUOTE:{" "}
+          <a href="tel:4164605911" className="underline hover:no-underline">
+            (416) 460-5911
+          </a>
+        </span>
       </div>
 
       <div className="container mx-auto px-4">
@@ -40,10 +45,12 @@ export function Header() {
           </nav>
 
           {/* CTA Button */}
-          <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            <Phone className="w-4 h-4 mr-2" />
-            Get Quote
-          </Button>
+          <a href="#quote">
+            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
+              <Phone className="w-4 h-4 mr-2" />
+              Get Quote
+            </Button>
+          </a>
         </div>
       </div>
     </header>

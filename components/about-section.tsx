@@ -29,10 +29,12 @@ export function AboutSection() {
               </p>
             </div>
 
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              Book Online Today
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
+            <a href="#quote">
+              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                Get a Free Quote
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </a>
           </div>
 
           {/* Right video placeholder */}
