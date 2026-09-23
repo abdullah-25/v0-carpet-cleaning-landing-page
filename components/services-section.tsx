@@ -1,4 +1,4 @@
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function ServicesSection() {
@@ -42,7 +42,11 @@ export function ServicesSection() {
         {/* Services grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {services.map((service, index) => (
-            <div key={index} className="group cursor-pointer">
+            <a
+              key={index}
+              href="#quote"
+              className="group block"
+            >
               <div className="space-y-4">
                 <div className="relative overflow-hidden rounded-lg">
                   <img
@@ -52,29 +56,14 @@ export function ServicesSection() {
                   />
                 </div>
                 <div className="text-center space-y-2">
-                  <h3 className="text-xl font-bold text-foreground border-b-2 border-primary pb-1 inline-block">
+                  <h3 className="text-xl font-bold text-foreground border-b-2 border-primary pb-1 inline-block group-hover:text-primary transition-colors">
                     {service.title.toUpperCase()}
                   </h3>
                   <p className="text-sm text-muted-foreground">{service.description}</p>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
-        </div>
-
-        {/* Navigation arrows */}
-        <div className="flex justify-center items-center space-x-4 mb-8">
-          <button className="w-12 h-12 bg-primary/10 hover:bg-primary/20 rounded-full flex items-center justify-center transition-colors">
-            <ChevronLeft className="w-5 h-5 text-primary" />
-          </button>
-          <div className="flex space-x-2">
-            <div className="w-2 h-2 bg-primary rounded-full"></div>
-            <div className="w-2 h-2 bg-muted rounded-full"></div>
-            <div className="w-2 h-2 bg-muted rounded-full"></div>
-          </div>
-          <button className="w-12 h-12 bg-primary/10 hover:bg-primary/20 rounded-full flex items-center justify-center transition-colors">
-            <ChevronRight className="w-5 h-5 text-primary" />
-          </button>
         </div>
 
         <div className="text-center">

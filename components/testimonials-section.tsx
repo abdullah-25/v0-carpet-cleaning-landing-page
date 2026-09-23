@@ -1,4 +1,4 @@
-import { Star, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react"
+import { Star, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function TestimonialsSection() {
@@ -42,8 +42,8 @@ export function TestimonialsSection() {
           </p>
         </div>
 
-        {/* Testimonials carousel */}
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        {/* Testimonials grid */}
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-card border border-border rounded-lg p-6 space-y-4">
               {/* Stars */}
@@ -62,20 +62,6 @@ export function TestimonialsSection() {
               </p>
             </div>
           ))}
-        </div>
-
-        {/* Navigation */}
-        <div className="flex justify-center items-center space-x-4 mb-8">
-          <button className="w-12 h-12 bg-primary/10 hover:bg-primary/20 rounded-full flex items-center justify-center transition-colors">
-            <ChevronLeft className="w-5 h-5 text-primary" />
-          </button>
-          <div className="flex space-x-2">
-            <div className="w-2 h-2 bg-primary rounded-full"></div>
-            <div className="w-2 h-2 bg-muted rounded-full"></div>
-          </div>
-          <button className="w-12 h-12 bg-primary/10 hover:bg-primary/20 rounded-full flex items-center justify-center transition-colors">
-            <ChevronRight className="w-5 h-5 text-primary" />
-          </button>
         </div>
 
         <div className="text-center">
